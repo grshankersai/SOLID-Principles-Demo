@@ -1,0 +1,3 @@
+interface Managerr{
+    void method();
+}

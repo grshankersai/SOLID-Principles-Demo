@@ -1,112 +1,60 @@
 // S : Single Responsibility
+/*
+class SingleResponsibilityViolation{
+    private String type_of_employee;
+    private int employee_id;
+    private int rating;
+    private int tip;
 
-class Chef{
+    public SingleResponsibilityViolation(String type,int id,int rate,int tip){
+        this.type_of_employee=type;
+        this.employee_id = id;
+        this.rating = rate;
+        this.tip = tip;
+
+    }
+    public void chef_cooking(){
+        System.out.println("The chef is cooking");
+    }
+    public void room_cleaning(){
+        System.out.println("The housekeeping is going on..")
+    }
+}
+*/
+
+
+
+
+
+
+// O : Open-Close Principle
+
+
+// Violation implies modifying the chef class..
+/*
+class Chef {
     private String name;
     private int emp_id;
     private boolean michelin;
 
-    public Chef(String name , int id , boolean val){
+    public Chef(String name, int id, boolean val) {
         this.name = name;
         this.emp_id = id;
         this.michelin = val;
     }
 
-    public void namesOfDishes(){
+    public void namesOfDishes() {
         System.out.println("Chicken biryani, Apollo fish , Kadai paneer");
     }
 
-    public String getName() {
-        return name;
+    public void newItalianDish(){
+        System.out.println("Pizza , Burger , Pasta");
     }
+}*/
 
-    public int getEmp_id() {
-        return emp_id;
-    }
+// L : Liskov Principle:
 
-    public boolean isMichelin() {
-        return michelin;
-    }
-}
-
-class Waiter{
-    private String name;
-    private int emp_id;
-    private int rating;
-
-    public Waiter(String name , int id , int rate){
-        this.name = name;
-        this.emp_id = id;
-        this.rating = rate;
-       }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getEmp_id() {
-        return emp_id;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-    // few methods..
-
-}
-class Housekeeping{
-    private String name;
-    private int emp_id;
-    private int tip;
-    public Housekeeping(String name , int id, int tip){
-        this.name = name;
-        this.emp_id = id;
-        this.tip = tip;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getEmp_id() {
-        return emp_id;
-    }
-
-    public int getTip() {
-        return tip;
-    }
-    // few methods.
-
-}
-
-class Introduction{
-    public Introduction(){
-
-    }
-    public Introduction(Chef ob1){
-        System.out.println("Hello I am a chef");
-        System.out.println("My name is : "+ob1.getName());
-        System.out.println("My Employee Id is "+ob1.getEmp_id());
-       String val= ob1.isMichelin() ?  "I am a Mitchlin Star chef" :  "I am  not a Mitchlin Star chef" ;
-       System.out.println(val);
-    }
-    public Introduction(Waiter ob1){
-        System.out.println("Hello I am a Waiter");
-        System.out.println("My name is : "+ob1.getName());
-        System.out.println("My Employee Id is "+ob1.getEmp_id());
-        System.out.println("My rating is "+ ob1.getRating());
-
-    }
-    public Introduction(Housekeeping ob1){
-        System.out.println("Hello I am a HouseKeeper");
-        System.out.println("My name is : "+ob1.getName());
-        System.out.println("My Employee Id is "+ob1.getEmp_id());
-        System.out.println("My rating is "+ ob1.getTip());
-
-    }
-}
-
-// O : Open-Close Principle
-
+/*
 class ItalianChef extends Chef{
 
     private int no_of_spl_dishes;
@@ -119,61 +67,40 @@ class ItalianChef extends Chef{
     public void Spl_dishes(){
         System.out.println("Pizza , Burger , Pasta");
     }
+
+    // Overriding the names of dishes method from parent class:
+
+    @Override
+    public void namesOfDishes() {
+        System.out.println("I dont know to cook the old dishes.")
+    }
 }
+
+*/
+
 
 //I : Interface Segregation
 
-interface RoomCleaning{
+/*
+interface splHousekeepingTasks{
+    void decorate();
+    void decorate_room();
     void clean_room();
 }
 
-interface RoomDecoration{
-    void decorate_room();
-}
-interface FloralArranger{
-    void decorate();
-}
-
-class SplRoomService extends Housekeeping implements RoomDecoration,FloralArranger{
-    public SplRoomService(String name , int id, int tip){
-        super(name,id,tip);
-    }
-    public void decorate_room(){
-        System.out.println("Room decorated");
-    }
-    public void decorate(){
-        System.out.println("Special Flower Arrangement done");
-    }
-}
+*/
 
 // D : Dependency Inversion
-
-class Problem{
-    private String text;
-    public Problem(String value){
-        this.text = value;
-    }
-    public String return_statement(){
-        return this.text;
-    }
-}
-
-interface Manager{
-    static void resolve(Problem obj){
-        System.out.println(obj.return_statement() + "Will be resolved");
+// Sample code DOI
+/*
+class HotelRecruitmentTeam{
+    private Manager manager1;
+    public HotelRecruitmentTeam(){
+        manager1 = new Manager();
     }
 
 }
-
-class Management{
-
-    public Management(Problem obj){
-        Manager.resolve(obj);
-    }
-}
-
-
-
+*/
 public class Restaurant {
         public static void main(String args[]){
             //S : Single Responsibility::
@@ -200,9 +127,7 @@ public class Restaurant {
 
 
             // Dependency Inversion:
-            Problem my_problem = new Problem("Room not clear");
-            Management mang = new Management(my_problem);
-
+           HotellRecruitmentTeam obj1 = new HotellRecruitmentTeam();
 
         }
 }

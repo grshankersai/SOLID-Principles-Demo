@@ -1,0 +1,3 @@
+interface FloralArranger{
+    void decorate();
+}
