@@ -1,3 +1,3 @@
 interface RoomCleaning{
-    void clean_room();
+    void cleanRoom();
 }

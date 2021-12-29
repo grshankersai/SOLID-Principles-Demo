@@ -1,12 +1,12 @@
 class Chef{
     private String name;
-    private int emp_id;
+    private int employeeId;
     private boolean michelin;
 
-    public Chef(String name , int id , boolean val){
+    public Chef(String name , int id , boolean isMichelin){
         this.name = name;
-        this.emp_id = id;
-        this.michelin = val;
+        this.employeeId = id;
+        this.michelin = isMichelin;
     }
 
     public void namesOfDishes(){
@@ -17,8 +17,8 @@ class Chef{
         return name;
     }
 
-    public int getEmp_id() {
-        return emp_id;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
     public boolean isMichelin() {

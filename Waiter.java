@@ -1,20 +1,20 @@
 class Waiter{
     private String name;
-    private int emp_id;
+    private int employeeId;
     private int rating;
 
-    public Waiter(String name , int id , int rate){
+    public Waiter(String name , int id , int rating){
         this.name = name;
-        this.emp_id = id;
-        this.rating = rate;
+        this.employeeId = id;
+        this.rating = rating;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getEmp_id() {
-        return emp_id;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
     public int getRating() {

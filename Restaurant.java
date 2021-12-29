@@ -118,16 +118,17 @@ public class Restaurant {
             chef1.namesOfDishes();
             ItalianChef chef2 = new ItalianChef("Robert",3009,false,5);
             chef2.namesOfDishes();
-            chef2.Spl_dishes();
+            chef2.specialDishes();
 
             //Creating and calling Spl room service
-            SplRoomService server1 = new SplRoomService("Ramesh",2001,500);
-            server1.decorate();
-            server1.decorate_room();
+            SpecialRoomService server1 = new SpecialRoomService("Ramesh",2001,500);
+            server1.flowerDecoration();
+            server1.decorateRoom();
 
 
             // Dependency Inversion:
-           HotellRecruitmentTeam obj1 = new HotellRecruitmentTeam();
+
+            HotelRecruitmentTeam obj1 = new HotelRecruitmentTeam(new MainManager() ,new HumanResources() );
 
         }
 }

@@ -1,13 +1,13 @@
 class ItalianChef extends Chef{
 
-    private int no_of_spl_dishes;
+    private int numberOfDishes;
 
-    public ItalianChef(String name , int id , boolean val , int dish_count){
+    public ItalianChef(String name , int id , boolean val , int numberOfDishes){
         super(name,id,val);
-        this.no_of_spl_dishes = dish_count;
+        this.numberOfDishes = numberOfDishes;
     }
 
-    public void Spl_dishes(){
+    public void specialDishes(){
         System.out.println("Pizza , Burger , Pasta");
     }
 }

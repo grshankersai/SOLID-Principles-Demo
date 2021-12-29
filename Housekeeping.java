@@ -1,10 +1,10 @@
 class Housekeeping{
     private String name;
-    private int emp_id;
+    private int employeeId;
     private int tip;
     public Housekeeping(String name , int id, int tip){
         this.name = name;
-        this.emp_id = id;
+        this.employeeId = id;
         this.tip = tip;
     }
 
@@ -12,8 +12,8 @@ class Housekeeping{
         return name;
     }
 
-    public int getEmp_id() {
-        return emp_id;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
     public int getTip() {

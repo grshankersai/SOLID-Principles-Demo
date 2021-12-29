@@ -1,3 +1,3 @@
 interface FloralArranger{
-    void decorate();
+    void flowerDecoration();
 }

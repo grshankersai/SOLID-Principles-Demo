@@ -1,3 +1,3 @@
 interface RoomDecoration{
-    void decorate_room();
+    void decorateRoom();
 }

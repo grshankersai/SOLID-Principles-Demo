@@ -1,0 +1,3 @@
+interface Process{
+    void recruitProcess();
+}
